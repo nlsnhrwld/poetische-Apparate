@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Nils\Documents\GitHub\poetische-Apparate\vvvv patches\asciidreieck.v4p" scrollx="0" scrolly="360" systemname="asciidreieck" filename="C:\Users\Nils\Desktop\poetsiche aparate\vvvv patches\asciidreieck.v4p">
+   <PATCH nodename="C:\Users\Nils\Documents\GitHub\poetische-Apparate\doppelt weil musso\asciidreieck.v4p" scrollx="0" scrolly="360" systemname="asciidreieck" filename="C:\Users\Nils\Desktop\poetsiche aparate\vvvv patches\asciidreieck.v4p">
    <BOUNDS type="Window" left="540" top="690" width="13260" height="10815">
    </BOUNDS>
    <NODE systemname="Segment (DX9)" nodename="Segment (DX9)" componentmode="Hidden" id="0">
@@ -76,6 +76,8 @@
    <PIN pinname="Actual Backbuffer Height" visible="1">
    </PIN>
    <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="5">
@@ -183,5 +185,15 @@
    <LINK srcnodeid="29" srcpinname="Output" dstnodeid="15" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="15" srcpinname="Output" dstnodeid="4" dstpinname="Texture">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="30" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="7200" top="8640" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7200" top="8640" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|EX9 Out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="EX9 Out" dstnodeid="30" dstpinname="Input Node">
    </LINK>
    </PATCH>

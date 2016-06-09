@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Nils\Documents\GitHub\poetische-Apparate\vvvv patches\asciidreieck.v4p" scrollx="0" scrolly="360" systemname="asciidreieck" filename="C:\Users\Nils\Desktop\poetsiche aparate\vvvv patches\asciidreieck.v4p">
-   <BOUNDS type="Window" left="540" top="690" width="13260" height="10815">
+   <PATCH nodename="C:\Users\Nils\Documents\GitHub\poetische-Apparate\doppelt weil musso\stripesdreieck.v4p" scrollx="0" scrolly="360" systemname="stripesdreieck" filename="C:\Users\Nils\Desktop\poetsiche aparate\vvvv patches\stripesdreieck.v4p">
+   <BOUNDS type="Window" left="6435" top="1830" width="13260" height="10815">
    </BOUNDS>
    <NODE systemname="Segment (DX9)" nodename="Segment (DX9)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="3270" top="1590" width="100" height="100">
@@ -63,9 +63,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="3300" top="6015" width="100" height="100">
+   <BOUNDS type="Node" left="4065" top="6165" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3300" top="6015" width="2400" height="1800">
+   <BOUNDS type="Box" left="4065" top="6165" width="2400" height="1800">
    </BOUNDS>
    <BOUNDS type="Window" left="21000" top="5490" width="6240" height="6495">
    </BOUNDS>
@@ -76,6 +76,12 @@
    <PIN pinname="Actual Backbuffer Height" visible="1">
    </PIN>
    <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="5">
@@ -107,9 +113,9 @@
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="6" dstpinname="Layers">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7575" top="1890" width="795" height="240">
+   <BOUNDS type="Box" left="6360" top="6765" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7575" top="1890" width="0" height="0">
+   <BOUNDS type="Node" left="6360" top="6765" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -121,9 +127,9 @@
    <LINK srcnodeid="6" srcpinname="Actual Backbuffer Height" dstnodeid="8" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8040" top="2265" width="795" height="240">
+   <BOUNDS type="Box" left="4410" top="6795" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="8040" top="2265" width="0" height="0">
+   <BOUNDS type="Node" left="4410" top="6795" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -161,27 +167,65 @@
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Glow (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Glow\Glow (EX9.Texture Filter).v4p" nodename="Glow (EX9.Texture Filter)" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="9720" top="7545" width="100" height="100">
+   <BOUNDS type="Node" left="7665" top="5325" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Ascii (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Ascii\Ascii (EX9.Texture Filter).v4p" nodename="Ascii (EX9.Texture Filter)" componentmode="Hidden" id="29">
-   <BOUNDS type="Node" left="9105" top="6465" width="100" height="100">
+   <LINK srcnodeid="7" srcpinname="Texture Out" dstnodeid="15" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Stripes (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Stripes\Stripes (EX9.Texture Filter).v4p" nodename="Stripes (EX9.Texture Filter)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="10200" top="6210" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Grayscale" slicecount="1" values="0">
+   <PIN pinname="Border Mode" slicecount="1" values="Mirror">
+   </PIN>
+   <PIN pinname="Stripe Count" slicecount="1" values="15.3">
+   </PIN>
+   <PIN pinname="Random Seed" slicecount="1" values="38">
+   </PIN>
+   <PIN pinname="Horizontal" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Shift" slicecount="1" values="1.38">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Texture Out" dstnodeid="29" dstpinname="Input">
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="21" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="15" dstpinname="Input">
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="4" dstpinname="Texture">
    </LINK>
-   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="4" dstpinname="Texture">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4740" top="5415" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4740" top="5415" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="500">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="px">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Backbuffer Height">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Backbuffer Width">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="23" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="8880" top="7890" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8880" top="7890" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|EX9 Out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="EX9 Out" dstnodeid="23" dstpinname="Input Node">
    </LINK>
    </PATCH>

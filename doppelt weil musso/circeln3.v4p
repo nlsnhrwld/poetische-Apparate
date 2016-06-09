@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Nils\Documents\GitHub\poetische-Apparate\vvvv patches\circeln3.v4p" systemname="circeln3" filename="C:\Users\Nils\Documents\GitHub\poetische-Apparate\vvvv patches\circeln3.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="6495" top="4605" width="9000" height="8370">
+   <PATCH nodename="C:\Users\Nils\Documents\GitHub\poetische-Apparate\doppelt weil musso\circeln3.v4p" systemname="circeln3" filename="C:\Users\Nils\Documents\GitHub\poetische-Apparate\vvvv patches\circeln3.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="3675" top="3495" width="9000" height="8370">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -27,28 +27,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="60" srcpinname="Output Node" dstnodeid="59" dstpinname="Input Node">
-   </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="61">
-   <BOUNDS type="Node" left="930" top="720" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="930" top="720" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Time">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="62" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="885" top="1665" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="885" top="1665" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="61" srcpinname="Y Output Value" dstnodeid="62" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="49">
    <BOUNDS type="Node" left="3780" top="5595" width="100" height="100">
@@ -182,14 +160,48 @@
    </NODE>
    <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="52" dstpinname="Input Y">
    </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="63" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="3900" top="6405" width="795" height="240">
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="64">
+   <BOUNDS type="Node" left="4215" top="6300" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Node" left="3900" top="6405" width="0" height="0">
+   <BOUNDS type="Box" left="4215" top="6300" width="2400" height="1800">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   <BOUNDS type="Window" left="13260" top="9240" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
+   <PIN pinname="Backbuffer Width" slicecount="1" values="500">
+   </PIN>
+   <PIN pinname="Backbuffer Height" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="49" srcpinname="Layer" dstnodeid="63" dstpinname="Input Node">
+   <LINK srcnodeid="49" srcpinname="Layer" dstnodeid="64" dstpinname="Layers">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="65" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="6675" top="7035" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6675" top="7035" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|EX9 Out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="64" srcpinname="EX9 Out" dstnodeid="65" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="66" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5130" top="5505" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5130" top="5505" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="500">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="px">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="64" dstpinname="Backbuffer Height">
    </LINK>
    </PATCH>
