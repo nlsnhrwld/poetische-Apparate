@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Nils\Documents\GitHub\poetische-Apparate\working patch\neuaufbau.v4p" scrollx="975" scrolly="1800" systemname="neuaufbau" filename="C:\Users\Nils\Documents\GitHub\poetische-Apparate\working patch\neuaufbau.v4p">
+   <PATCH nodename="C:\Users\Nils\Documents\GitHub\poetische-Apparate\working patch\neuaufbau.v4p" scrollx="975" scrolly="-12" systemname="neuaufbau" filename="C:\Users\Nils\Documents\GitHub\poetische-Apparate\working patch\neuaufbau.v4p">
    <BOUNDS type="Window" left="11235" top="405" width="12255" height="14205">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -9,7 +9,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2280" top="20820" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="-4125" top="2070" width="15735" height="7785">
+   <BOUNDS type="Window" left="-180" top="2025" width="15735" height="7785">
    </BOUNDS>
    <PIN pinname="Backbuffer Width" visible="1">
    </PIN>
@@ -457,7 +457,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7800" top="300" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5.1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="100">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
