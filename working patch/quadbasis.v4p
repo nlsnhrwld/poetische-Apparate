@@ -167,6 +167,8 @@
    </PIN>
    <PIN pinname="ScaleY" slicecount="1" visible="1" values="0.21">
    </PIN>
+   <PIN pinname="TranslateX" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="7">
    <BOUNDS type="Node" left="2985" top="6090" width="100" height="100">
@@ -267,7 +269,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2445" top="3060" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.21">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.05,0.05">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -277,5 +279,21 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="6" dstpinname="ScaleY">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2040" top="2595" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2040" top="2595" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="TranslateX">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="6" dstpinname="TranslateX">
    </LINK>
    </PATCH>
