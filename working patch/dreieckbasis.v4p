@@ -5,7 +5,7 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Resolution" slicecount="1" values="4" visible="1">
+   <PIN pinname="Resolution" slicecount="1" visible="1" values="4">
    </PIN>
    <PIN pinname="Transform" visible="1">
    </PIN>
@@ -107,7 +107,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3240" top="4440" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1920">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1080">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
